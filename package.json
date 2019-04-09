@@ -10,6 +10,7 @@
   "scripts": {
     "start": "parcel ./public/index.html",
     "build": "parcel build ./public/index.html",
+    "test": "jest",
     "pretty": "prettier --write ./src/**.{js,css}"
   },
   "devDependencies": {
@@ -17,7 +18,9 @@
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/preset-env": "^7.4.3",
+    "babel-jest": "^24.7.1",
     "babel-preset-react-app": "^7.0.2",
+    "jest": "^24.7.1",
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.16.4"
   },
@@ -32,5 +35,11 @@
       ["@babel/proposal-class-properties"],
       ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }]
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
