@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.3"
   },
   "scripts": {
     "start": "parcel ./public/index.html",
@@ -27,6 +28,7 @@
       ["babel-preset-react-app", { "absoluteRuntime": false }]
     ],
     "plugins": [
+      ["react-hot-loader/babel"],
       ["@babel/proposal-class-properties"],
       ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }]
     ]
