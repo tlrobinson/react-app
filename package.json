@@ -15,31 +15,15 @@
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.4.3",
     "babel-preset-react-app": "^7.0.2",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.16.4"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
   "babel": {
     "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "useBuiltIns": "entry"
-        }
-      ],
-      [
-        "babel-preset-react-app",
-        {
-          "absoluteRuntime": false
-        }
-      ]
+      ["@babel/preset-env", { "useBuiltIns": "entry" }],
+      ["babel-preset-react-app", { "absoluteRuntime": false }]
     ],
-    "plugins": [
-      "@babel/proposal-class-properties"
-    ]
+    "plugins": ["@babel/proposal-class-properties"]
   }
 }
