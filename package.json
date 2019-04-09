@@ -11,6 +11,9 @@
     "start": "parcel ./public/index.html",
     "build": "parcel build ./public/index.html",
     "test": "jest",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:prettier": "prettier ./src/**.{js,css}",
+    "lint:eslint": "eslint src",
     "pretty": "prettier --write ./src/**.{js,css}"
   },
   "devDependencies": {
@@ -18,10 +21,18 @@
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/preset-env": "^7.4.3",
+    "babel-eslint": "^9.0.0",
     "babel-jest": "^24.7.1",
     "babel-preset-react-app": "^7.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
     "jest": "^24.7.1",
     "parcel-bundler": "^1.12.3",
+    "parcel-plugin-eslint": "^1.0.7",
     "prettier": "^1.16.4"
   },
   "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
@@ -41,5 +52,8 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
     }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }
